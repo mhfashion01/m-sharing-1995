@@ -1,0 +1,13 @@
+name = "drum-midi-video-studio"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "dist"
+
+# R2 bucket binding — no access keys in code, this binding is injected by Cloudflare at runtime
+[[r2_buckets]]
+binding = "DRUM_ASSETS"
+bucket_name = "drum-assets"
+
+# Public CDN base URL for serving R2 PNG assets directly (not proxied through the function)
+# Set this to your R2 public bucket URL or custom domain
+# [env.vars]
+# VITE_ASSET_CDN_BASE_URL = "https://assets.yourapp.com"
